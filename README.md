@@ -1,17 +1,17 @@
-#Partner_Campaigns
+# Partner_Campaigns
 
 Partner_Campaigns is implemented using Spring Boot and Java 8. Restful services are created to manage ad campaigns. 
 Partners can call services to create, update and find campaigns.
 
-###How to build
+### How to build
 
 mvn clean install
 
-###How to run
+### How to run
 
 java -jar target/partner_campaigns-01.00.00.00.jar
 
-###Create Campaign
+### Create Campaign
 
 Campaign can be created by calling service URL http://localhost:8080/campaign/create
 Request for the service is json object.
@@ -30,7 +30,7 @@ Accept : application/json
 	"ad_status" : "ACTIVE"
 }
 
-###Find Campaigns for content, title and duration.
+### Find Campaigns for content, title and duration.
 
 Campigns can be found using ad content, title and duration. Response contains active and inactive campigns that match the criteria.
 
@@ -44,7 +44,7 @@ Http method : GET
 
  http://localhost:8080/campaign/search?content=test
 
-###Find Campaign by partner.
+### Find Campaign by partner.
 
 Campigns can be found using partner id. Response contains only active campaigns
 
@@ -54,7 +54,7 @@ Http method : GET
 
  http://localhost:8080/campaign/search?title=test
 
-###Create Campaign
+### Update Campaign
 
 Campaign can be updated by calling service URL http://localhost:8080/campaign/update
 Request for the service is json object. Returns updated campaign object.
